@@ -50,7 +50,7 @@
 
 	<div class="suggestions" aria-label="Conversation starters">
 		{#each entry.suggestions as suggestion}
-			<button type="button" onclick={() => sendMessage(suggestion)}>{suggestion}</button>
+			<button type="button" onclick={() => (draft = suggestion)}>{suggestion}</button>
 		{/each}
 	</div>
 
