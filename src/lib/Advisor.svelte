@@ -15,6 +15,10 @@
 	let loading = $state(false);
 	let error = $state('');
 
+	function useSuggestion(suggestion: string) {
+		draft = suggestion;
+	}
+
 	async function sendMessage(text = draft) {
 		const content = text.trim();
 		if (!content || loading) return;
@@ -50,7 +54,7 @@
 
 	<div class="suggestions" aria-label="Conversation starters">
 		{#each entry.suggestions as suggestion}
-			<button type="button" onclick={() => (draft = suggestion)}>{suggestion}</button>
+			<button type="button" onclick={() => useSuggestion(suggestion)}>{suggestion}</button>
 		{/each}
 	</div>
 
