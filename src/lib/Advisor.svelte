@@ -54,7 +54,12 @@
 
 	<div class="suggestions" aria-label="Conversation starters">
 		{#each entry.suggestions as suggestion}
-			<button type="button" onclick={() => chooseSuggestion(suggestion)}>{suggestion}</button>
+			<button
+				type="button"
+				onpointerdown={() => chooseSuggestion(suggestion)}
+				onmousedown={() => chooseSuggestion(suggestion)}
+				onclick={() => chooseSuggestion(suggestion)}
+			>{suggestion}</button>
 		{/each}
 	</div>
 
