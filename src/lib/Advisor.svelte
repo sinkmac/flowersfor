@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { affiliateDisclosure, liveAffiliateLinks } from '$lib/affiliateLinks';
+	import { affiliateDisclosure, getLiveAffiliateLinksForMode } from '$lib/affiliateLinks';
 	import { entryPoints, type AdvisorMode } from '$lib/prompts';
 
 	type ChatMessage = {
@@ -10,6 +10,7 @@
 	let { mode }: { mode: AdvisorMode } = $props();
 
 	let entry = $derived(entryPoints[mode]);
+	let affiliateLinksForMode = $derived(getLiveAffiliateLinksForMode(mode));
 	let draft = $state('');
 	let messages = $state<ChatMessage[]>([]);
 	let loading = $state(false);
@@ -84,6 +85,20 @@
 		{/if}
 	</div>
 
+	{#if messages.some((message) => message.role === 'assistant') && affiliateLinksForMode.length > 0}
+		<div class="affiliate-panel">
+			<p>{affiliateDisclosure}</p>
+			<div>
+				{#each affiliateLinksForMode as link}
+					<a href={link.url} rel="sponsored nofollow noopener" target="_blank">
+						<strong>{link.label}</strong>
+						<span>{link.sublabel}</span>
+					</a>
+				{/each}
+			</div>
+		</div>
+	{/if}
+
 	<form class="composer" onsubmit={(event) => { event.preventDefault(); sendMessage(); }}>
 		<label for="note">Write it like a note to a florist</label>
 		<textarea
@@ -94,18 +109,4 @@
 		></textarea>
 		<button type="submit" disabled={loading || !draft.trim()}>Ask the florist</button>
 	</form>
-
-	{#if messages.some((message) => message.role === 'assistant') && liveAffiliateLinks.length > 0}
-		<div class="affiliate-panel">
-			<p>{affiliateDisclosure}</p>
-			<div>
-				{#each liveAffiliateLinks as link}
-					<a href={link.url} rel="sponsored nofollow noopener" target="_blank">
-						<strong>{link.label}</strong>
-						<span>{link.sublabel}</span>
-					</a>
-				{/each}
-			</div>
-		</div>
-	{/if}
 </section>
