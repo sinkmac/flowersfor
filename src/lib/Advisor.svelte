@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { affiliateDisclosure, liveAffiliateLinks } from '$lib/affiliateLinks';
 	import { entryPoints, type AdvisorMode } from '$lib/prompts';
 
@@ -12,32 +11,12 @@
 
 	let entry = $derived(entryPoints[mode]);
 	let draft = $state('');
-	let textareaElement = $state<HTMLTextAreaElement | null>(null);
 	let messages = $state<ChatMessage[]>([]);
 	let loading = $state(false);
 	let error = $state('');
 
-	onMount(() => {
-		const suggestionButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-suggestion]'));
-		for (const button of suggestionButtons) {
-			button.addEventListener('click', () => {
-				draft = button.dataset.suggestion ?? '';
-				if (textareaElement) {
-					textareaElement.value = draft;
-					textareaElement.dispatchEvent(new Event('input', { bubbles: true }));
-					textareaElement.focus();
-				}
-			});
-		}
-	});
-
-	function useSuggestion(suggestion: string) {
+	function chooseSuggestion(suggestion: string) {
 		draft = suggestion;
-		if (textareaElement) {
-			textareaElement.value = suggestion;
-			textareaElement.dispatchEvent(new Event('input', { bubbles: true }));
-			textareaElement.focus();
-		}
 	}
 
 	async function sendMessage(text = draft) {
@@ -75,7 +54,7 @@
 
 	<div class="suggestions" aria-label="Conversation starters">
 		{#each entry.suggestions as suggestion}
-			<button type="button" data-suggestion={suggestion} onclick={() => useSuggestion(suggestion)}>{suggestion}</button>
+			<button type="button" onclick={() => chooseSuggestion(suggestion)}>{suggestion}</button>
 		{/each}
 	</div>
 
@@ -91,7 +70,9 @@
 			</div>
 		{/each}
 		{#if loading}
-			<div class="message message--assistant message--thinking">Thinking like a florist…</div>
+			<div class="message message--assistant message--thinking" aria-live="polite">
+				<span>Finding the right words</span><span class="thinking-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+			</div>
 		{/if}
 		{#if error}
 			<div class="message message--error">{error}</div>
@@ -103,7 +84,6 @@
 		<textarea
 			id="note"
 			bind:value={draft}
-			bind:this={textareaElement}
 			rows="5"
 			placeholder="e.g. flowers for my mum's 70th, she loves purple, nothing too fussy, about £40"
 		></textarea>
