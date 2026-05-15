@@ -4,13 +4,6 @@
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<title>FlowersFor | Conversational flower advisor</title>
-	<meta
-		name="description"
-		content="Ask FlowersFor what flowers to send for an occasion, wedding, or sympathy moment. Warm, specific flower advice with no quiz."
-	/>
-</svelte:head>
 
 <header class="site-header">
 	<a class="brand" href="/" aria-label="FlowersFor home">
@@ -22,6 +15,8 @@
 		<a href="/sympathy">Sympathy</a>
 		<a href="/affiliate-disclosure">Disclosure</a>
 		<a href="/privacy">Privacy</a>
+		<a href="/contact">Contact</a>
+		<a href="/contact">Contact</a>
 	</nav>
 </header>
 

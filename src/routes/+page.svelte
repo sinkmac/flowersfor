@@ -1,17 +1,28 @@
 <script lang="ts">
 	import { affiliateDisclosure } from '$lib/affiliateLinks';
+	import SeoHead from '$lib/SeoHead.svelte';
 	import { entryPoints } from '$lib/prompts';
 
 	const entries = [entryPoints.occasion, entryPoints.wedding, entryPoints.sympathy];
 </script>
 
+<SeoHead
+	title="FlowersFor — Find the right flowers for any occasion"
+	description="Tell us who the flowers are for and we'll recommend exactly what to get — for occasions, weddings and sympathy."
+	canonical="https://flowersfor.co.uk/"
+/>
+
 <svelte:head>
-	<title>FlowersFor | Ask what flowers to send</title>
-	<meta
-		name="description"
-		content="A conversational flower advisor for occasions, weddings, and sympathy flowers. Specific, warm advice before you order."
-	/>
+	<script type="application/ld+json">
+		{JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'FlowersFor',
+			url: 'https://flowersfor.co.uk'
+		})}
+	</script>
 </svelte:head>
+
 
 <main class="home-shell">
 	<section class="hero">

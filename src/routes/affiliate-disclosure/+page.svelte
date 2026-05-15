@@ -1,10 +1,14 @@
 <script lang="ts">
+	import SeoHead from '$lib/SeoHead.svelte';
 	import { affiliateDisclosure, affiliateLinks } from '$lib/affiliateLinks';
 </script>
 
-<svelte:head>
-	<title>Affiliate disclosure | FlowersFor</title>
-</svelte:head>
+<SeoHead
+	title="Affiliate disclosure | FlowersFor"
+	description="How FlowersFor may earn commission from relevant flower supplier links without changing the advice shown."
+	canonical="https://flowersfor.co.uk/affiliate-disclosure"
+/>
+
 
 <main class="text-page">
 	<p class="kicker">Affiliate disclosure</p>

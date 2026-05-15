@@ -1,6 +1,13 @@
-<svelte:head>
-	<title>Privacy | FlowersFor</title>
-</svelte:head>
+<script lang="ts">
+	import SeoHead from '$lib/SeoHead.svelte';
+</script>
+
+<SeoHead
+	title="Privacy | FlowersFor"
+	description="How FlowersFor handles privacy, AI advisor messages, affiliate links and external supplier websites."
+	canonical="https://flowersfor.co.uk/privacy"
+/>
+
 
 <main class="text-page">
 	<p class="kicker">Privacy</p>
