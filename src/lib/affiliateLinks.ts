@@ -2,8 +2,8 @@ export const affiliateLinks = {
 	floetica: {
 		label: 'Order from Floetica',
 		sublabel: 'Luxury same-day delivery across London',
-		url: null,
-		status: 'live_pending_url',
+		url: 'https://www.awin1.com/cread.php?awinmid=122244&awinaffid=2860477&ued=https%3A%2F%2Ffloetica.com',
+		status: 'live',
 		network: 'Awin',
 		geo: 'london'
 	},
