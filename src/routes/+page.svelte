@@ -15,12 +15,12 @@
 <svelte:head>
 	<meta name="google-site-verification" content="dylZKayys6-4uyFR07A3F17o_WgIMwLHfLW47K1Nlg4" />
 	<script type="application/ld+json">
-		{JSON.stringify({
-			'@context': 'https://schema.org',
-			'@type': 'WebSite',
-			name: 'FlowersFor',
-			url: 'https://flowersfor.co.uk'
-		})}
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "FlowersFor",
+			"url": "https://flowersfor.co.uk"
+		}
 	</script>
 </svelte:head>
 
