@@ -94,6 +94,13 @@ textarea { width: 100%; resize: vertical; border: 0; border-radius: 1.2rem; padd
 .text-page { max-width: 780px; }
 .text-page h1 { font-size: clamp(2.5rem, 7vw, 4.8rem); }
 .text-page li { margin-block: .7rem; }
+.article-page article { display: grid; gap: 1rem; }
+.article-page h1 { margin-bottom: .5rem; }
+.article-page h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-top: 1.4rem; }
+.article-page h3 { color: var(--sage); margin-top: .6rem; }
+.article-page .lede { font-size: clamp(1.12rem, 2vw, 1.32rem); color: rgba(43, 41, 36, .82); }
+.warning-box { background: rgba(190,127,130,.14); border: 1px solid rgba(190,127,130,.35); border-radius: 1.2rem; color: #61322f; padding: 1rem; }
+.article-cta { display: inline-flex; margin-top: 1rem; border-radius: 999px; background: var(--sage-deep); color: white; font-weight: 700; padding: .85rem 1.1rem; text-decoration: none; }
 
 @keyframes fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes thinking-dot {
