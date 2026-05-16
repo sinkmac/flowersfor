@@ -27,7 +27,7 @@ export async function callAnthropicAdvisor(args: { mode: AdvisorMode; messages: 
 			'x-api-key': apiKey
 		},
 		body: JSON.stringify({
-			model: 'claude-sonnet-4-20250514',
+			model: 'claude-sonnet-4-6',
 			max_tokens: 300,
 			temperature: 0.7,
 			system: advisorPrompts[args.mode],

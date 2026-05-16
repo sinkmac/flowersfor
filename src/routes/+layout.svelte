@@ -16,7 +16,6 @@
 		<a href="/affiliate-disclosure">Disclosure</a>
 		<a href="/privacy">Privacy</a>
 		<a href="/contact">Contact</a>
-		<a href="/contact">Contact</a>
 	</nav>
 </header>
 
