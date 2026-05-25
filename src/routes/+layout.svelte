@@ -13,6 +13,7 @@
 		<a href="/occasion">Occasion</a>
 		<a href="/wedding">Wedding</a>
 		<a href="/sympathy">Sympathy</a>
+		<a href="/about">About</a>
 		<a href="/affiliate-disclosure">Disclosure</a>
 		<a href="/privacy">Privacy</a>
 		<a href="/contact">Contact</a>
@@ -26,6 +27,7 @@
 		FlowersFor is an independent advice tool. We're not florists — we're a tool that helps you find the right flowers. Always check delivery availability and allergy information directly with your chosen supplier.
 	</p>
 	<nav aria-label="Footer navigation">
+		<a href="/about">About</a>
 		<a href="/affiliate-disclosure">Affiliate disclosure</a>
 		<a href="/privacy">Privacy</a>
 	</nav>

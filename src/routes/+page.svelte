@@ -17,9 +17,46 @@
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "WebSite",
-			"name": "FlowersFor",
-			"url": "https://flowersfor.co.uk"
+			"@graph": [
+				{
+					"@type": "WebSite",
+					"name": "FlowersFor",
+					"url": "https://flowersfor.co.uk",
+					"description": "A flower advisor for awkward, emotional, urgent and relationship-specific gifting."
+				},
+				{
+					"@type": "Organization",
+					"name": "AI Scotland Productions",
+					"url": "https://aiscotlandproductions.com"
+				},
+				{
+					"@type": "WebApplication",
+					"name": "FlowersFor occasion advisor",
+					"url": "https://flowersfor.co.uk/occasion",
+					"description": "A free flower recommendation tool for choosing flowers by occasion, recipient relationship, tone and budget.",
+					"applicationCategory": "LifestyleApplication",
+					"operatingSystem": "Web",
+					"offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+				},
+				{
+					"@type": "WebApplication",
+					"name": "FlowersFor wedding advisor",
+					"url": "https://flowersfor.co.uk/wedding",
+					"description": "A free wedding flower direction tool for choosing bouquets, arrangements and florist conversations by season, setting, style and budget.",
+					"applicationCategory": "LifestyleApplication",
+					"operatingSystem": "Web",
+					"offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+				},
+				{
+					"@type": "WebApplication",
+					"name": "FlowersFor sympathy advisor",
+					"url": "https://flowersfor.co.uk/sympathy",
+					"description": "A free sympathy flower recommendation tool for choosing appropriate, honest and kind condolence flowers without guesswork.",
+					"applicationCategory": "LifestyleApplication",
+					"operatingSystem": "Web",
+					"offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+				}
+			]
 		}
 	</script>
 </svelte:head>
@@ -36,7 +73,7 @@
 		</div>
 		<div class="botanical-mark" aria-hidden="true">
 			<svg viewBox="0 0 160 220" role="img">
-				<title>Lisianthus line illustration</title>
+				<desc>Lisianthus line illustration</desc>
 				<path d="M80 204 C74 166 76 128 83 86" />
 				<path d="M84 89 C52 79 42 45 65 28 C91 9 124 30 118 58 C114 81 98 90 84 89Z" />
 				<path d="M80 92 C64 65 72 36 96 31" />
