@@ -98,6 +98,6 @@
 	<section class="trust-note">
 		<h2>Advice first. Buying second.</h2>
 		<p>{affiliateDisclosure}</p>
-		<p>If every affiliate URL is still pending, the advisor simply gives the recommendation. No dead buttons. No fake links.</p>
+		<p>Our advice doesn't depend on what we can sell you. If we can't link a recommendation, you still get the recommendation.</p>
 	</section>
 </main>

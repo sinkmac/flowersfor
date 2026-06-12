@@ -43,7 +43,7 @@ export const entryPoints: Record<AdvisorMode, {
 	occasion: {
 		title: 'For an Occasion',
 		shortTitle: 'Occasion',
-		description: "Birthday, apology, thank you, new baby, anniversary — tell us the situation and we'll give you a confident choice.",
+		description: "Birthday, apology, thank you, new baby, anniversary. Tell us the situation and we'll give you one confident answer, not twelve maybes.",
 		path: '/occasion',
 		openingLine: "Tell me who they're for, what you want the flowers to say, and roughly what you'd like to spend.",
 		register: 'Warm, confident, and just playful enough.',
@@ -56,7 +56,7 @@ export const entryPoints: Record<AdvisorMode, {
 	wedding: {
 		title: 'For a Wedding',
 		shortTitle: 'Wedding',
-		description: 'Bouquets, buttonholes, ceremony flowers and tables — clear flower direction for a day where details matter.',
+		description: 'Bouquets, buttonholes, ceremony and tables. Clear flower direction for a day where every detail gets photographed.',
 		path: '/wedding',
 		openingLine: 'Tell me the season, setting, mood, and anything you already know you like or hate.',
 		register: 'Considered, precise, quietly aspirational.',
@@ -69,7 +69,7 @@ export const entryPoints: Record<AdvisorMode, {
 	sympathy: {
 		title: 'With Sympathy',
 		shortTitle: 'Sympathy',
-		description: 'Calm, appropriate advice when you want to be kind and do not want to get it wrong.',
+		description: "Calm, appropriate advice when you want to be kind and don't want to get it wrong. No upselling. No rush.",
 		path: '/sympathy',
 		openingLine: 'Tell me who the flowers are for, your relationship to them, and whether this is for a home, funeral, or workplace.',
 		register: 'Quiet, unhurried, no upselling energy.',
