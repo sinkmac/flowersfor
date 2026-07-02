@@ -7,14 +7,6 @@ export const affiliateLinks = {
 		network: 'Awin',
 		geo: 'london'
 	},
-	gardenista: {
-		label: 'Browse Gardenista',
-		sublabel: 'Inspiration for flowers, plants and garden style',
-		url: 'https://www.awin1.com/cread.php?awinmid=37292&awinaffid=2860477&ued=https%3A%2F%2Fwww.gardenista.com',
-		status: 'live',
-		network: 'Awin',
-		geo: 'uk'
-	},
 	myflowers: {
 		label: 'Order from MyFlowers',
 		sublabel: 'Same-day delivery in 3 hours — London',
