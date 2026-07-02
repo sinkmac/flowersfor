@@ -46,8 +46,8 @@ export const affiliateDisclosure =
 
 const liveAffiliateKeysByMode = {
 	occasion: ['floetica', 'myflowers'],
-	wedding: ['floetica', 'gardenista', 'myflowers'],
-	sympathy: ['floetica', 'gardenista', 'myflowers']
+	wedding: [],
+	sympathy: ['floetica', 'myflowers']
 } as const;
 
 export function getLiveAffiliateLinksForMode(mode: keyof typeof liveAffiliateKeysByMode) {

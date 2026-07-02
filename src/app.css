@@ -51,6 +51,8 @@ p { line-height: 1.65; }
 .example-list { display: grid; gap: 1rem; }
 .example-list p { margin: 0; color: rgba(43, 41, 36, .78); font-size: clamp(1.03rem, 1.8vw, 1.18rem); line-height: 1.65; }
 .example-list strong { color: var(--sage-deep); display: block; font-weight: 600; margin-bottom: .2rem; }
+.example-cta { display: inline-block; margin-top: -.25rem; margin-bottom: .5rem; padding: .5rem .85rem; border-radius: 999px; background: var(--sage-deep); color: #fff; font-size: .92rem; font-weight: 600; text-decoration: none; }
+.example-cta:hover { background: #152b21; }
 
 .advisor { display: grid; gap: 1.25rem; padding-top: 2rem; }
 .advisor__intro { max-width: 860px; }

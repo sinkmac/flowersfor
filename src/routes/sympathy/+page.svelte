@@ -3,6 +3,7 @@
 	import Advisor from '$lib/Advisor.svelte';
 	import SeoHead from '$lib/SeoHead.svelte';
 	import SchemaJson from '$lib/SchemaJson.svelte';
+	import { affiliateLinks } from '$lib/affiliateLinks';
 
 const advisorSchema = {
 	'@context': 'https://schema.org',
@@ -69,8 +70,11 @@ const faqSchema = {
 		<h2 id="sympathy-examples">Examples of what we'd tell you</h2>
 		<div class="example-list">
 			<p><strong>Flowers for a colleague who's lost a parent</strong> White and green — lisianthus, white roses, or chrysanthemums with soft foliage. Nothing red, nothing bright. Send to their home rather than the funeral unless you've been specifically invited to contribute there. Keep the card line short and plain: "Thinking of you" carries more than anything poetic. They will not remember elaborate words. They will remember that you sent something.</p>
+			<a href={affiliateLinks.floetica.url} rel="sponsored nofollow noopener" target="_blank" class="example-cta">Order something like this from Floetica →</a>
 			<p><strong>Funeral flowers when the family has asked for "family flowers only"</strong> Respect it — don't send to the funeral. Instead, send a small arrangement to the family home a week or two later, when the cards have stopped and the house has gone quiet. That is when flowers actually help. If the notice suggested a charity donation instead, do that, and send a card.</p>
+			<a href={affiliateLinks.floetica.url} rel="sponsored nofollow noopener" target="_blank" class="example-cta">Order something like this from Floetica →</a>
 			<p><strong>Flowers for someone whose pet has died</strong> Yes, it's worth doing, and no, it isn't silly. A small posy — something gentle like freesias or spray roses — with a card that names the animal. "So sorry about Bramble" means more than any general sentiment. Avoid anything grand; the scale should match a quiet sadness, not a state occasion.</p>
+			<a href={affiliateLinks.floetica.url} rel="sponsored nofollow noopener" target="_blank" class="example-cta">Order something like this from Floetica →</a>
 		</div>
 	</section>
 </main>
