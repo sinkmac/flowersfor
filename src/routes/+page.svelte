@@ -5,8 +5,8 @@
 </script>
 
 <SeoHead
-	title="FlowersFor \u2014 Finish the sentence, we\u2019ll finish the bouquet"
-	description="Tell us what\u2019s happened and we\u2019ll recommend exactly what to get. Flowers for any moment \u2014 occasions, weddings, sympathy, and the things we struggle to put into words."
+	title="FlowersFor &mdash; Finish the sentence, we&rsquo;ll finish the bouquet"
+	description="Tell us what&rsquo;s happened and we&rsquo;ll recommend exactly what to get. Flowers for any moment &mdash; occasions, weddings, sympathy, and the things we struggle to put into words."
 	canonical="https://flowersfor.co.uk/"
 />
 
@@ -65,10 +65,10 @@
 	<section class="trust-note">
 		<h2>Advice first. Buying second.</h2>
 		<p>{affiliateDisclosure}</p>
-		<p>Our advice doesn\u2019t depend on what we can sell you. If we can\u2019t link a recommendation, you still get the recommendation.</p>
+		<p>Our advice doesn&rsquo;t depend on what we can sell you. If we can&rsquo;t link a recommendation, you still get the recommendation.</p>
 	</section>
 
 	<section class="guides-link">
-		<p><a href="/guides">Not ready to ask? Read the guides. \u2192</a></p>
+		<p><a href="/guides">Not ready to ask? Read the guides. &rarr;</a></p>
 	</section>
 </main>

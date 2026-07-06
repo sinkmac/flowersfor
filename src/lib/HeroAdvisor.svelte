@@ -170,7 +170,7 @@
 <section class="hero-advisor">
 	<h1 class="hero-advisor__headline">{headline}</h1>
 
-	<p class="hero-advisor__prompt">What\u2019s happened?</p>
+	<p class="hero-advisor__prompt">What&#8217;s happened?</p>
 
 	<div class="hero-advisor__chips" aria-label="Quick situations">
 		{#each chipOptions as chip}
@@ -227,7 +227,7 @@
 			{/if}
 
 			<p class="hero-advisor__continue">
-				<a href="/{mode}">Continue chatting with the {mode} advisor \u2192</a>
+				<a href="/{mode}">Continue chatting with the {mode} advisor &rarr;</a>
 			</p>
 		{/if}
 
@@ -235,7 +235,7 @@
 		{#if error}
 			<div class="hero-advisor__fallback" aria-live="polite">
 				<p class="hero-advisor__fallback-note">
-					The advisor isn\u2019t available right now. Here\u2019s what we\u2019d tell you for this situation:
+					The advisor isn&rsquo;t available right now. Here&rsquo;s what we&rsquo;d tell you for this situation:
 				</p>
 				<div class="hero-advisor__fallback-examples">
 					{#each (activeChip?.fallbackOverride ?? fallbackExamples[mode]) as example}
@@ -246,7 +246,7 @@
 					{/each}
 				</div>
 				<p class="hero-advisor__fallback-cta">
-					<a href="/{mode}">More advice for {mode} flowers \u2192</a>
+					<a href="/{mode}">More advice for {mode} flowers &rarr;</a>
 				</p>
 			</div>
 		{/if}
