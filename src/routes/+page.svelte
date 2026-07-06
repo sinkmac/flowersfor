@@ -67,4 +67,8 @@
 		<p>{affiliateDisclosure}</p>
 		<p>Our advice doesn\u2019t depend on what we can sell you. If we can\u2019t link a recommendation, you still get the recommendation.</p>
 	</section>
+
+	<section class="guides-link">
+		<p><a href="/guides">Not ready to ask? Read the guides. \u2192</a></p>
+	</section>
 </main>

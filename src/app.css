@@ -182,5 +182,21 @@ textarea { width: 100%; resize: vertical; border: 0; border-radius: 1.2rem; padd
 	.hero-advisor__input-row button { width: 100%; }
 	.hero-advisor__response { padding: .75rem; }
 	.hero-advisor__fallback { padding: 1rem; }
-	.hero-advisor__fallback-examples { gap: .75rem; }
-}
+		.hero-advisor__fallback-examples { gap: .75rem; }
+	}
+
+	.guides-link {
+		text-align: center;
+		margin-top: 1.5rem;
+	}
+	.guides-link a {
+		color: var(--sage-deep);
+		font-weight: 600;
+		font-size: 1.1rem;
+	}
+	.footer-affiliate {
+		font-size: .85rem;
+		color: rgba(43, 41, 36, .62);
+		margin: 0;
+		padding: 0 1rem;
+	}
