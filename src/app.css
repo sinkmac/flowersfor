@@ -109,6 +109,56 @@ textarea { width: 100%; resize: vertical; border: 0; border-radius: 1.2rem; padd
 .warning-box { background: rgba(190,127,130,.14); border: 1px solid rgba(190,127,130,.35); border-radius: 1.2rem; color: #61322f; padding: 1rem; }
 .article-cta { display: inline-flex; margin-top: 1rem; border-radius: 999px; background: var(--sage-deep); color: white; font-weight: 700; padding: .85rem 1.1rem; text-decoration: none; }
 
+/* ─── Hero Advisor ─── */
+.hero-advisor { padding: clamp(2rem, 5vw, 4rem) 0 0; }
+.hero-advisor__headline { font-size: clamp(2.8rem, 9vw, 6.5rem); margin-bottom: .3rem; min-height: 1.3em; }
+.hero-advisor__prompt { font-size: clamp(1.2rem, 2.5vw, 1.6rem); color: var(--rose); font-weight: 600; margin: 0 0 .8rem; letter-spacing: -.02em; }
+.hero-advisor__chips { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1.25rem; }
+.chip { border: 1px solid rgba(49,79,66,.18); background: rgba(255,250,241,.82); border-radius: 999px; padding: .65rem 1.2rem; font-size: .95rem; color: var(--sage-deep); cursor: pointer; transition: background .15s, box-shadow .15s; white-space: nowrap; box-shadow: 0 4px 12px rgba(38,48,37,.06); }
+.chip:hover { background: var(--paper); box-shadow: 0 8px 20px rgba(38,48,37,.1); }
+.chip:disabled { opacity: .5; cursor: not-allowed; }
+.chip--sympathy { border-color: rgba(49,79,66,.26); background: rgba(223,231,223,.6); }
+.chip--sympathy:hover { background: rgba(223,231,223,.9); }
+.chip--wedding { border-color: rgba(190,127,130,.2); background: rgba(238,226,210,.6); }
+.chip--wedding:hover { background: rgba(238,226,210,.9); }
+.hero-advisor__input-row { display: flex; gap: .5rem; }
+.hero-advisor__input-row input { flex: 1; border: 1px solid rgba(49,79,66,.2); border-radius: 999px; padding: .85rem 1.25rem; font-size: 1.08rem; background: var(--paper); color: var(--charcoal); outline: none; transition: border-color .15s, box-shadow .15s; }
+.hero-advisor__input-row input:focus { border-color: var(--sage); box-shadow: 0 0 0 3px rgba(49,79,66,.16); }
+.hero-advisor__input-row button { border: 0; border-radius: 999px; background: var(--sage); color: white; font-weight: 700; padding: .7rem 1.6rem; font-size: 1.08rem; cursor: pointer; transition: background .15s; white-space: nowrap; }
+.hero-advisor__input-row button:hover { background: var(--sage-deep); }
+.hero-advisor__input-row button:disabled { opacity: .55; cursor: not-allowed; }
+
+.hero-advisor__response { margin-top: 1.5rem; display: flex; flex-direction: column; gap: .9rem; padding: 1rem; background: rgba(255,250,241,.62); border: 1px solid rgba(49,79,66,.14); border-radius: 1.8rem; }
+.resp-message { max-width: 760px; padding: 1rem 1.1rem; border-radius: 1.25rem; line-height: 1.55; animation: fade-in .35s ease both; }
+.resp-message--assistant { background: white; color: var(--charcoal); box-shadow: 0 16px 40px rgba(38,48,37,.09); }
+.resp-message--user { align-self: flex-end; background: var(--sage); color: white; }
+
+.hero-advisor__affiliate { margin-top: 1rem; border-radius: 1.6rem; padding: 1rem; background: rgba(190,127,130,.16); border: 1px solid rgba(190,127,130,.3); }
+.hero-advisor__affiliate a { display: block; margin-top: .75rem; padding: 1rem; border-radius: 1rem; background: var(--paper); text-decoration: none; }
+.hero-advisor__affiliate a strong { color: var(--sage-deep); }
+.hero-advisor__affiliate span { display: block; color: rgba(43,41,36,.7); font-size: .95rem; }
+.hero-advisor__affiliate p { font-size: .9rem; color: rgba(43,41,36,.65); margin: 0; }
+
+.hero-advisor__continue { margin-top: 1rem; font-size: 1rem; }
+.hero-advisor__continue a { color: var(--sage-deep); text-decoration: underline; text-underline-offset: 3px; }
+
+.hero-advisor__thinking { margin-top: 1.5rem; display: inline-flex; align-items: center; gap: .45rem; padding: 1rem 1.25rem; background: rgba(255,250,241,.84); border: 1px solid rgba(49,79,66,.12); border-radius: 1.8rem; box-shadow: 0 14px 36px rgba(38,48,37,.07); color: rgba(31,56,47,.72); font-style: italic; }
+.hero-advisor__thinking-label { font-size: 1rem; }
+
+.hero-advisor__fallback { margin-top: 1.5rem; background: rgba(255, 250, 241, .72); border: 1px solid rgba(49, 79, 66, .14); border-radius: 2rem; padding: clamp(1.2rem, 4vw, 2rem); }
+.hero-advisor__fallback-note { color: rgba(43,41,36,.7); margin: 0 0 1rem; font-size: clamp(1.05rem, 2vw, 1.2rem); }
+.hero-advisor__fallback-examples { display: grid; gap: 1rem; }
+.fallback-example { border-top: 1px solid rgba(49,79,66,.1); padding-top: 1rem; }
+.fallback-example strong { color: var(--sage-deep); display: block; font-weight: 600; margin-bottom: .25rem; font-size: clamp(1.05rem, 1.8vw, 1.15rem); }
+.fallback-example p { margin: 0; color: rgba(43, 41, 36, .78); font-size: clamp(1rem, 1.6vw, 1.12rem); line-height: 1.65; }
+.hero-advisor__fallback-cta { margin-top: 1.25rem; }
+.hero-advisor__fallback-cta a { color: var(--sage-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+.hero-static-routes { margin-top: 2.5rem; }
+.hero-static-routes h2 { margin-bottom: .75rem; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
 @keyframes fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes thinking-dot {
 	0%, 80%, 100% { opacity: .28; transform: translateY(0); }
@@ -123,4 +173,14 @@ textarea { width: 100%; resize: vertical; border: 0; border-radius: 1.2rem; padd
 	.door { min-height: 220px; }
 	.message { max-width: 100%; }
 	.home-shell, .advisor-shell, .text-page { padding-inline: .85rem; }
+	.hero-advisor { padding-top: 1.5rem; }
+	.hero-advisor__headline { font-size: clamp(2rem, 10vw, 3.6rem); }
+	.hero-advisor__chips { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: .4rem; padding-bottom: .35rem; }
+	.hero-advisor__chips::-webkit-scrollbar { display: none; }
+	.chip { white-space: nowrap; font-size: .85rem; padding: .5rem 1rem; flex-shrink: 0; }
+	.hero-advisor__input-row { flex-direction: column; gap: .5rem; }
+	.hero-advisor__input-row button { width: 100%; }
+	.hero-advisor__response { padding: .75rem; }
+	.hero-advisor__fallback { padding: 1rem; }
+	.hero-advisor__fallback-examples { gap: .75rem; }
 }

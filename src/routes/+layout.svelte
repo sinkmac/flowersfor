@@ -10,9 +10,6 @@
 		<span>FlowersFor</span>
 	</a>
 	<nav aria-label="Primary navigation">
-		<a href="/occasion">Occasion</a>
-		<a href="/wedding">Wedding</a>
-		<a href="/sympathy">Sympathy</a>
 		<a href="/about">About</a>
 		<a href="/affiliate-disclosure">Disclosure</a>
 		<a href="/privacy">Privacy</a>
@@ -24,7 +21,7 @@
 
 <footer class="site-footer">
 	<p>
-		FlowersFor is an independent advice tool. We're not florists — we're a tool that helps you find the right flowers. Always check delivery availability and allergy information directly with your chosen supplier.
+		FlowersFor is an independent advice tool. We\u2019re not florists \u2014 we\u2019re a tool that helps you find the right flowers. Always check delivery availability and allergy information directly with your chosen supplier.
 	</p>
 	<nav aria-label="Footer navigation">
 		<a href="/about">About</a>
