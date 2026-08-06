@@ -38,7 +38,7 @@
 
 	const chipOptions: ChipDef[] = [
 		{ label: 'I forgot our anniversary', mode: 'occasion' },
-		{ label: 'Someone died', mode: 'sympathy' },
+		{ label: 'There\'s been a loss', mode: 'sympathy' },
 		{ label: "I said something stupid", mode: 'occasion' },
 		{ label: 'Just because', mode: 'occasion' },
 		{
@@ -115,7 +115,7 @@
 
 	function detectMode(text: string): AdvisorMode {
 		const lower = text.toLowerCase();
-		if (lower.includes('died') || lower.includes('lost') || lower.includes('death') || lower.includes('funeral') || lower.includes('sympathy') || lower.includes('pet')) return 'sympathy';
+		if (lower.includes('died') || lower.includes('lost') || lower.includes('loss') || lower.includes('death') || lower.includes('funeral') || lower.includes('sympathy') || lower.includes('pet')) return 'sympathy';
 		if (lower.includes('wedding') || lower.includes('bride') || lower.includes('groom') || lower.includes('bouquet') || lower.includes('buttonhole')) return 'wedding';
 		return 'occasion';
 	}
@@ -199,6 +199,10 @@
 			</button>
 		</div>
 	</form>
+
+	<p class="hero-advisor__clarify">
+		Type any situation &mdash; a funeral, an apology, a fiftieth anniversary &mdash; and we&rsquo;ll tell you which flowers to send and what to write on the card.
+	</p>
 
 	<!-- Advisor response area -->
 	{#if advisorStarted && !loading}

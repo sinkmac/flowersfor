@@ -85,17 +85,21 @@
 		{/if}
 	</div>
 
-	{#if messages.some((message) => message.role === 'assistant') && affiliateLinksForMode.length > 0}
+	{#if messages.some((message) => message.role === 'assistant')}
 		<div class="affiliate-panel">
 			<p>{affiliateDisclosure}</p>
-			<div>
-				{#each affiliateLinksForMode as link}
-					<a href={link.url} rel="sponsored nofollow noopener" target="_blank">
-						<strong>{link.label}</strong>
-						<span>{link.sublabel}</span>
-					</a>
-				{/each}
-			</div>
+			{#if affiliateLinksForMode.length > 0}
+				<div>
+					{#each affiliateLinksForMode as link}
+						<a href={link.url} rel="sponsored nofollow noopener" target="_blank">
+							<strong>{link.label}</strong>
+							<span>{link.sublabel}</span>
+						</a>
+					{/each}
+				</div>
+			{:else}
+				<p class="affiliate-fallback">Find flowers from a local florist or your usual UK delivery service.</p>
+			{/if}
 		</div>
 	{/if}
 
