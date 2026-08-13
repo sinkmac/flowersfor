@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { affiliateDisclosure, getLiveAffiliateLinksForMode } from '$lib/affiliateLinks';
 	import { type AdvisorMode } from '$lib/prompts';
+	import { track } from '$lib/analytics';
 
 	type ChatMessage = {
 		role: 'user' | 'assistant';
@@ -150,6 +151,7 @@
 				{ role: 'user', content: text },
 				{ role: 'assistant', content: data.message }
 			];
+			track({ name: 'advice_reached' });
 		} catch (caught) {
 			error = caught instanceof Error ? caught.message : 'The advisor could not answer just now.';
 		} finally {
@@ -191,6 +193,7 @@
 				type="text"
 				bind:value={draft}
 				placeholder="Describe your situation in a few words\u2026"
+				onfocus={() => track({ name: 'input_focus' })}
 				disabled={loading}
 				autocomplete="off"
 			/>

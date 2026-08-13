@@ -1,7 +1,13 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { affiliateDisclosure } from '$lib/affiliateLinks';
 	import HeroAdvisor from '$lib/HeroAdvisor.svelte';
 	import SeoHead from '$lib/SeoHead.svelte';
+	import { track } from '$lib/analytics';
+
+	onMount(() => {
+		track({ name: 'page_variant', value: 'landing-a' });
+	});
 </script>
 
 <SeoHead
