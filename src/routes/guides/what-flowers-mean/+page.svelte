@@ -4,7 +4,7 @@
 </script>
 
 <SeoHead
-	title="What Each Flower Actually Reads As | FlowersFor"
+	title="Flower Meanings: What Each One Actually Says | FlowersFor"
 	description="Red roses read as romance, not remorse. What your choice says before the card is opened."
 	canonical="https://flowersfor.co.uk/guides/what-flowers-mean"
 />

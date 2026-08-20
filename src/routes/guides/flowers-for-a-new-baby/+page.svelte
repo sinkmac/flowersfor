@@ -4,7 +4,7 @@
 </script>
 
 <SeoHead
-	title="Flowers for a New Baby: What New Parents Actually Want | FlowersFor"
+	title="New Baby Card Message: What to Write | FlowersFor"
 	description="What to send when a baby arrives — timing matters more than the flowers, and new parents want something modest that fits their life."
 	canonical="https://flowersfor.co.uk/guides/flowers-for-a-new-baby"
 />

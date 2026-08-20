@@ -4,7 +4,7 @@
 </script>
 
 <SeoHead
-	title="Sympathy Flowers: A Plain Guide | FlowersFor"
+	title="Condolence Message: What to Write (Plus Flowers) | FlowersFor"
 	description="What to send, when to send it, what to write. A plain guide for people who have never had to do this."
 	canonical="https://flowersfor.co.uk/guides/sympathy-flowers-etiquette"
 />

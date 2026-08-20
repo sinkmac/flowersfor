@@ -4,7 +4,7 @@
 </script>
 
 <SeoHead
-	title="Flowers for Someone in Hospital: What's Actually Allowed | FlowersFor"
+	title="Get Well Message: What to Write on the Card | FlowersFor"
 	description="Many NHS wards ban flowers. How to know before you order, what works in private rooms, and what to send when flowers aren't an option."
 	canonical="https://flowersfor.co.uk/guides/flowers-for-someone-in-hospital"
 />

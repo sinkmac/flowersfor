@@ -4,7 +4,7 @@
 </script>
 
 <SeoHead
-	title="Thank-You Flowers: When Someone Showed Up for You | FlowersFor"
+	title="Thank You Message: What to Write on the Card | FlowersFor"
 	description="How to say thank you with flowers — matching the scale of the gesture, what to write, and why timing is more flexible than apologies or celebrations."
 	canonical="https://flowersfor.co.uk/guides/thank-you-flowers"
 />

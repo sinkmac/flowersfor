@@ -4,7 +4,7 @@
 </script>
 
 <SeoHead
-	title="Forgot the Anniversary? Do This Now | FlowersFor"
+	title="Forgot the Anniversary: What to Say (and What to Send) | FlowersFor"
 	description="The triage page. What to order in the next ten minutes and what to say when they arrive."
 	canonical="https://flowersfor.co.uk/guides/forgot-the-anniversary"
 />

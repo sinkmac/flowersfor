@@ -4,7 +4,7 @@
 </script>
 
 <SeoHead
-	title="Apology Flowers: What to Send and What Never to Send | FlowersFor"
+	title="Apology Message: What to Write When You're Sorry | FlowersFor"
 	description="What flowers actually say sorry — and the ones that make it worse. One straight answer, no guesswork."
 	canonical="https://flowersfor.co.uk/guides/apology-flowers"
 />
