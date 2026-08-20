@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { splitCard, splitAtCard, replacePlatitudes } from './card.ts';
+import { splitCard, splitAtCard, replacePlatitudes, replacePlaceholders } from './card.ts';
 
 const t = (name: string, fn: () => void): void => {
 	try {
@@ -73,4 +73,28 @@ t('adds closing full stop after truncation', () => {
 
 t('leaves a clean card untouched', () => {
 	assert.equal(replacePlatitudes('Thinking of you and your family.'), 'Thinking of you and your family.');
+});
+
+// --- placeholder guard ---
+t('replaces [cat\'s name] with "your cat"', () => {
+	assert.equal(
+		replacePlaceholders("I'm so sorry about [cat's name] — losing a pet is a real loss."),
+		"I'm so sorry about your cat — losing a pet is a real loss."
+	);
+});
+
+t('replaces generic [their name] with "them"', () => {
+	assert.equal(
+		replacePlaceholders('Thinking of [their name] today.'),
+		'Thinking of them today.'
+	);
+});
+
+t('replaces [pet\'s name] with "your pet"', () => {
+	assert.equal(replacePlaceholders('Sending love to [pet\'s name].'), 'Sending love to your pet.');
+});
+
+t('placeholder guard fires inside splitCard end-to-end', () => {
+	const r = splitCard("Sympathy advice.\n\nCARD: I'm so sorry about [cat's name] — thinking of you.");
+	assert.equal(r.card, "I'm so sorry about your cat — thinking of you.");
 });

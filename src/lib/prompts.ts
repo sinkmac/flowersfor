@@ -24,7 +24,7 @@ Keep responses warm, specific, and under 150 words. Never sound like a website. 
 
 When you recommend, point them somewhere they can actually order from. If London suits them, mention Floetica (luxury same-day) or MyFlowers (3-hour delivery). If not, suggest finding a good local florist or a UK-wide delivery service. Make it natural — "You can get that from Floetica if you're in London" rather than a corporate plug.
 
-Also write a short card message with every recommendation. It should be 1-3 sentences the sender can hand-write onto the flower card — specific to their situation, in plain honest English, not a greetings-card cliche. Put it after the flower advice, on its own line, prefixed exactly with "CARD: ". Keep the flower recommendation as the main body and treat the card as a short, distinct block. Do not write card copy that names people the sender has not named, or that presumes details they have not given.`;
+Also write a short card message with every recommendation. It should be 1-3 sentences the sender can hand-write onto the flower card — specific to their situation, in plain honest English, not a greetings-card cliche. Put it after the flower advice, on its own line, prefixed exactly with "CARD: ". Keep the flower recommendation as the main body and treat the card as a short, distinct block. Do not write card copy that names people the sender has not named, or that presumes details they have not given. Never write a blank placeholder like "[name]" or "[cat's name]" on the card — if the sender did not give a specific name, write natural phrasing instead ("your cat", "them", "your mum").`;
 
 export const advisorPrompts: Record<AdvisorMode, string> = {
 	occasion: `${basePrompt}

@@ -36,6 +36,17 @@ export function splitAtCard(text: string): [string, string] | null {
 	return [text.slice(0, match.index).trimEnd(), text.slice(idx).trim()];
 }
 
+// Never surface a literal "[bracket]" placeholder the model may have emitted
+// when the sender didn't give a pet's/person's name. Replace it with natural
+// phrasing (e.g. "your cat", "them") so the card never ships placeholder text.
+export function replacePlaceholders(card: string): string {
+	return card
+		// "my cat's name" / "[cat's name]"
+		.replace(/\[(?:the |my )?(cat|dog|pet)'s name\]/gi, (_, animal) => `your ${animal}`)
+		// generic "[their name]" / "[name]" / "[grandma's name]" etc.
+		.replace(/\[[^\]\[]*\]/g, 'them');
+}
+
 export function replacePlatitudes(card: string): string {
 	// If a platitude is present, truncate from its start onward rather than
 	// delete mid-string (which can leave a grammatical fragment). Then tidy the
@@ -71,7 +82,7 @@ export function splitCard(
 	}
 
 	const [recommendation, rawCard] = cardParts;
-	const cleaned = replacePlatitudes(rawCard);
+	const cleaned = replacePlaceholders(replacePlatitudes(rawCard));
 
 	return { recommendation, card: cleaned };
 }
