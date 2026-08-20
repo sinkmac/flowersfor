@@ -13,6 +13,7 @@
 	let affiliateLinksForMode = $derived(getLiveAffiliateLinksForMode(mode));
 	let draft = $state('');
 	let messages = $state<ChatMessage[]>([]);
+	let card = $state<string | null>(null);
 	let loading = $state(false);
 	let error = $state('');
 
@@ -27,6 +28,7 @@
 		error = '';
 		draft = '';
 		messages = [...messages, { role: 'user', content }];
+		card = null;
 		loading = true;
 
 		try {
@@ -38,6 +40,7 @@
 			const data = await response.json();
 			if (!response.ok) throw new Error(data.error ?? 'The advisor could not answer just now.');
 			messages = [...messages, { role: 'assistant', content: data.message }];
+			card = data.card ?? null;
 		} catch (caught) {
 			error = caught instanceof Error ? caught.message : 'The advisor could not answer just now.';
 		} finally {
@@ -75,6 +78,16 @@
 				{message.content}
 			</div>
 		{/each}
+
+		{#if card}
+			<div class="message message--assistant">
+				<div class="resp-card">
+					<strong>The card:</strong>
+					<span>&ldquo;{card}&rdquo;</span>
+				</div>
+			</div>
+		{/if}
+
 		{#if loading}
 			<div class="message message--assistant message--thinking" aria-live="polite">
 				<span>Finding the right words</span><span class="thinking-dots" aria-hidden="true"><span></span><span></span><span></span></span>

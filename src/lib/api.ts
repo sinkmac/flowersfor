@@ -1,5 +1,6 @@
 import { env } from '$env/dynamic/private';
 import { advisorPrompts, isAdvisorMode, type AdvisorMode } from './prompts';
+import { splitCard } from './card';
 
 type AdvisorMessage = {
 	role: 'user' | 'assistant';
@@ -28,7 +29,7 @@ export async function callAnthropicAdvisor(args: { mode: AdvisorMode; messages: 
 		},
 		body: JSON.stringify({
 			model: 'claude-sonnet-4-6',
-			max_tokens: 500,
+			max_tokens: 700,
 			temperature: 0.7,
 			system: advisorPrompts[args.mode],
 			messages: args.messages
@@ -46,7 +47,9 @@ export async function callAnthropicAdvisor(args: { mode: AdvisorMode; messages: 
 	const data = await response.json();
 	const text = data.content?.find((part: { type: string }) => part.type === 'text')?.text ?? '';
 
-	return { status: 200, body: { message: text } };
+	const { recommendation, card } = splitCard(text);
+
+	return { status: 200, body: { message: recommendation, card } };
 }
 
 export function parseAdvisorRequest(input: unknown): { mode: AdvisorMode; messages: AdvisorMessage[] } | null {

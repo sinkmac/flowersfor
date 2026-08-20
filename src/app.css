@@ -133,6 +133,8 @@ textarea { width: 100%; resize: vertical; border: 0; border-radius: 1.2rem; padd
 .resp-message { max-width: 760px; padding: 1rem 1.1rem; border-radius: 1.25rem; line-height: 1.55; animation: fade-in .35s ease both; }
 .resp-message--assistant { background: white; color: var(--charcoal); box-shadow: 0 16px 40px rgba(38,48,37,.09); }
 .resp-message--user { align-self: flex-end; background: var(--sage); color: white; }
+.resp-card { margin-top: .6rem; max-width: 760px; padding: 1rem 1.1rem; border-left: 3px solid var(--rose-soft); background: rgba(255,250,241,.7); border-radius: 1.25rem; color: var(--sage-deep); font-family: Fraunces, Georgia, serif; line-height: 1.6; animation: fade-in .35s ease both; }
+.resp-card strong { display: block; font-family: inherit; font-style: normal; letter-spacing: .02em; margin-bottom: .3rem; }
 
 .hero-advisor__affiliate { margin-top: 1rem; border-radius: 1.6rem; padding: 1rem; background: rgba(190,127,130,.16); border: 1px solid rgba(190,127,130,.3); }
 .hero-advisor__affiliate a { display: block; margin-top: .75rem; padding: 1rem; border-radius: 1rem; background: var(--paper); text-decoration: none; }

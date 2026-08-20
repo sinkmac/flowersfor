@@ -99,6 +99,7 @@
 	let draft = $state('');
 	let mode = $state<AdvisorMode>(defaultMode);
 	let messages = $state<ChatMessage[]>([]);
+	let card = $state<string | null>(null);
 	let loading = $state(false);
 	let error = $state('');
 	let advisorStarted = $state(false);
@@ -116,7 +117,7 @@
 
 	function detectMode(text: string): AdvisorMode {
 		const lower = text.toLowerCase();
-		if (lower.includes('died') || lower.includes('lost') || lower.includes('loss') || lower.includes('death') || lower.includes('funeral') || lower.includes('sympathy') || lower.includes('pet')) return 'sympathy';
+		if (lower.includes('died') || lower.includes('lost') || lower.includes('loss') || lower.includes('death') || lower.includes('funeral') || lower.includes('sympathy') || lower.includes('passed') || lower.includes('passing') || lower.includes('bereavement') || lower.includes('pet')) return 'sympathy';
 		if (lower.includes('wedding') || lower.includes('bride') || lower.includes('groom') || lower.includes('bouquet') || lower.includes('buttonhole')) return 'wedding';
 		return 'occasion';
 	}
@@ -132,6 +133,7 @@
 		advisorStarted = true;
 		error = '';
 		messages = [];
+		card = null;
 		loading = true;
 
 		const userContent = context ? `${context}\n\n${text}` : text;
@@ -151,6 +153,7 @@
 				{ role: 'user', content: text },
 				{ role: 'assistant', content: data.message }
 			];
+			card = data.card ?? null;
 			track({ name: 'advice_reached' });
 		} catch (caught) {
 			error = caught instanceof Error ? caught.message : 'The advisor could not answer just now.';
@@ -217,6 +220,13 @@
 						{message.content}
 					</div>
 				{/each}
+
+				{#if card}
+					<div class="resp-card">
+						<strong>The card:</strong>
+						<span>&ldquo;{card}&rdquo;</span>
+					</div>
+				{/if}
 			</div>
 
 			{#if affiliateLinksForMode.length > 0}

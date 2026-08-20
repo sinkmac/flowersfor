@@ -12,6 +12,7 @@
 
 	let draft = $state('');
 	let messages = $state<ChatMessage[]>([]);
+	let card = $state<string | null>(null);
 	let loading = $state(false);
 	let error = $state('');
 	let mode = $state<AdvisorMode>('occasion');
@@ -29,6 +30,9 @@
 			lower.includes('death') ||
 			lower.includes('funeral') ||
 			lower.includes('sympathy') ||
+			lower.includes('passed') ||
+			lower.includes('passing') ||
+			lower.includes('bereavement') ||
 			lower.includes('pet')
 		)
 			return 'sympathy';
@@ -52,6 +56,7 @@
 		mode = detectMode(content);
 		draft = '';
 		messages = [];
+		card = null;
 		loading = true;
 
 		try {
@@ -66,6 +71,7 @@
 				{ role: 'user', content },
 				{ role: 'assistant', content: data.message }
 			];
+			card = data.card ?? null;
 			track({ name: 'advice_reached' });
 		} catch (caught) {
 			error = caught instanceof Error ? caught.message : 'The advisor could not answer just now.';
@@ -127,6 +133,13 @@
 				{#each messages as message}
 					<div class={`resp-message resp-message--${message.role}`}>{message.content}</div>
 				{/each}
+
+				{#if card}
+					<div class="resp-card">
+						<strong>The card:</strong>
+						<span>&ldquo;{card}&rdquo;</span>
+					</div>
+				{/if}
 			</div>
 
 			{#if getLiveAffiliateLinksForMode(mode).length > 0}
@@ -280,4 +293,4 @@
 		font-style: italic;
 		line-height: 1.6;
 	}
-</style>
+	</style>
