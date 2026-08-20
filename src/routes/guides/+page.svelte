@@ -4,7 +4,7 @@
 
 <SeoHead
 	title="The Guides — straight answers, no browsing required | FlowersFor"
-	description="Six straight-ahead guides for the moments most people don't plan for: apology flowers, card messages, sympathy etiquette, anniversary recovery, flower meanings, and the groom's side."
+	description="Straight-ahead guides for the moments most people don't plan for: apology flowers, card messages, sympathy etiquette, condolence messages, anniversary recovery, flower meanings, and the groom's side."
 	canonical="https://flowersfor.co.uk/guides"
 />
 
@@ -25,6 +25,10 @@
 			<a href="/guides/sympathy-flowers-etiquette" class="guide-card">
 				<h2>Sympathy Flowers</h2>
 				<p>A plain guide for people who have never had to do this.</p>
+			</a>
+			<a href="/guides/condolence-message" class="guide-card">
+				<h2>Condolence Message</h2>
+				<p>What to write in a sympathy card — copy-these lines, by relationship, and what never to say.</p>
 			</a>
 			<a href="/guides/forgot-the-anniversary" class="guide-card">
 				<h2>Forgot the Anniversary</h2>

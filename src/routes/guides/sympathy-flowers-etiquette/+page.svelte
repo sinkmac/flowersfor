@@ -32,6 +32,7 @@
 		<p>"He was a good man and we will miss him." <em>(Use the person's name if you knew them. Naming them matters.)</em></p>
 		<p>"Thinking of you. No need to reply."</p>
 		<p>That last line — "no need to reply" — is a kindness. Grieving people face a mountain of thank-you notes. Releasing them from one is a real gift.</p>
+		<p>For more — longer messages, close relationships, a colleague, a friend's parent, a pet, and what never to write — see our <a href="/guides/condolence-message">condolence message guide</a>.</p>
 
 		<h2>Timing</h2>
 		<p>There is no wrong time. Before the funeral, after it, a month later. If you have only just heard, it is not too late.</p>
